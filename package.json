@@ -1,0 +1,6 @@
+{
+  "name": "main",
+  "scripts": {
+    "now-build": "cd dist/"
+  }
+}
