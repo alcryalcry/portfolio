@@ -1,0 +1,10 @@
+[Rr]elease/
+[Rr]eleases/
+[Bb]uild/
+[Dd]ist/
+node_modules
+npm-debug.log
+report.html
+.nuxt
+package-lock.json
+mockapi/package-lock.json
