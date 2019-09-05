@@ -4,10 +4,9 @@ extends ../layouts/layout.pug
 
 
 block content
-  .container
-    //- <li style="display: flex; justify-content: space-between; align-items: flex-start; font-size: 4rem; padding: 2rem 0;">
-    //-   <a class="link" href="https://nuxt-notes.alcryalcry.now.sh/">NOTES</a>
-    //- </li>
-    //- <li style="display: flex; justify-content: space-between; align-items: flex-start; font-size: 4rem; padding: 2rem 0;">
-    //-   <a class="link" href="https://nuxt-graphs.alcryalcry.now.sh/">GRAPHS</a>
-    //- </li>
+  .container(style="padding-top: 8rem; padding-bottom: 8rem;")
+    ul
+      li(style="display: flex; justify-content: space-between; align-items: flex-start; font-size: 4rem; padding: 2rem 0;")
+        a(class="link" href="https://nuxt-notes.alcryalcry.now.sh/") NOTES
+      li(style="display: flex; justify-content: space-between; align-items: flex-start; font-size: 4rem; padding: 2rem 0;")
+        a(class="link" href="https://nuxt-graphs.alcryalcry.now.sh/") GRAPHS 
