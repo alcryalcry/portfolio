@@ -1,0 +1,17 @@
+include ../social/social
+
+
+mixin info-head(data)
+  .info-head
+    .col.col--left
+      picture.img
+        img(src=data.img alt=data.name)
+      .text
+        .title.title--h3!=data.name
+        .position.text--18!=data.position
+        .city.text--18!=data.city
+        .description
+          each text in data.description
+            p.text--16!=text
+    .col.col--right
+      +social(data.social)

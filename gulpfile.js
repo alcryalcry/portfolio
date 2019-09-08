@@ -92,7 +92,7 @@ function styles() {
 							.pipe(autoprefixer())
 							.pipe(gulpif(!config.isDev, cleanCSS({level: 2})))
 							.pipe(gulpif(config.isDev, sourcemaps.write()))
-							.pipe(gulp.dest(config.dest + '/assets/css'))
+							.pipe(gulp.dest(config.dest + '/css'))
 							.pipe(browserSync.stream());
 }
 
@@ -100,7 +100,7 @@ function styles() {
 function scripts() {
   return gulp.src('./src/common/js/main.js')
 							.pipe(webpack(webpackConfig))
-							.pipe(gulp.dest(config.dest + '/assets/js'))
+							.pipe(gulp.dest(config.dest + '/js'))
 							.pipe(browserSync.stream());
 }
 
@@ -112,14 +112,14 @@ function images() {
 								progressive: true,
 								optimizationLevel: 5
 							})))
-							.pipe(gulp.dest((config.dest + '/assets/img')))
+							.pipe(gulp.dest((config.dest + '/img')))
 							.pipe(browserSync.stream());
 }
 
 
 function assets() {
 	return gulp.src(['!src/static/img', '!src/static/svg', 'src/static/**/*'])
-							.pipe(gulp.dest((config.dest + '/assets')))
+							.pipe(gulp.dest((config.dest)))
 							.pipe(browserSync.stream());
 }
 
@@ -134,7 +134,7 @@ function svg() {
 									}
 								}
 							}))
-							.pipe(gulp.dest('dist/assets/svg'));
+							.pipe(gulp.dest('dist/svg'));
 }
 
 

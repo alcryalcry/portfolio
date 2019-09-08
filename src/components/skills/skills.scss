@@ -1,0 +1,16 @@
+.skills {
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    margin: -0.5rem;
+  }
+
+  &__item {
+    color: rgba(0,0,0,.8);
+    background: $lightgray;
+    padding: .75rem 1.25rem;
+    margin: .5rem;
+    border-radius: 5px;
+  }
+}

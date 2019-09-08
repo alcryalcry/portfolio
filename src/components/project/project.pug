@@ -1,0 +1,7 @@
+mixin project(data)
+  a.project(href=data.href target="_blank" noreferrer)
+    .img
+      img(src=data.img alt=data.name)
+    .text
+      .title.title--h3!=data.name
+      .status.text--16!=data.status

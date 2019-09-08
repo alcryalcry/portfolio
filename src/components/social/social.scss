@@ -1,0 +1,29 @@
+.social {
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    margin: -1rem;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__link {
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+    transition: $tc;
+    &:active,
+    &:focus {
+      color: $blue;
+    }
+    
+    @include desktop {
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}

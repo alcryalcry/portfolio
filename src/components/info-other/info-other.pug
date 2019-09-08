@@ -1,0 +1,6 @@
+mixin info-other(data)
+  .info-other
+    .title.title--h4!=data.title
+    each link in data.links
+      .link-block
+        a.link(href=link target="_blank" noreferrer)!=link

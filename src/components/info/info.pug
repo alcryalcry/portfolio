@@ -1,0 +1,122 @@
+include ../info-head/info-head
+include ../info-other/info-other
+include ../skills/skills
+include ../project/project
+
+mixin info(data= {})
+  -
+    const {
+      head = {
+        img: 'img/photo.jpg',
+        name: 'Alexander Shiryakov',
+        city: 'Moscow',
+        position: 'Frontend Developer',
+        description: [
+          'I have been working in this field for more than a two years. <br/>Participated in the development of various projects, such as landing pages, corporate websites or online stores.',
+          'I am interested in participating in the development of more complex and interesting projects.'
+        ],
+        social: [
+          {
+            name: 'GitHub',
+            href: 'https://github.com/alcryalcry',
+            icon: 'social-github'
+          },
+          {
+            name: 'Email',
+            href: 'mailto:alcryalcry@gmail.com',
+            icon: 'social-email'
+          },
+          {
+            name: 'Facebook',
+            href: 'https://www.facebook.com/al.obnx',
+            icon: 'social-fb'
+          },
+          {
+            name: 'LinkedIn',
+            href: 'https://www.linkedin.com/in/alexander-s-08b438142/',
+            icon: 'social-linkedin'
+          },
+          {
+            name: 'VK',
+            href: 'https://vk.com/id299096577',
+            icon: 'social-vk'
+          },
+        ]
+      },
+      skills = [
+        'Vue',
+        'Nuxt',
+        'Responsive design',
+        'JS',
+        'REST api',
+        'ajax',
+        'json',
+        'Canvas 2d',
+        'Git',
+        'Gulp',
+        'Webpack 4',
+        'SASS/SCSS',
+        'Stylus',
+        'Pug',
+        'HTML5',
+        'CSS',
+        'jQuery',
+      ],
+      projects = [
+        {
+          name: 'Notes [training]',
+          href: 'https://nuxt-notes.alcryalcry.now.sh/',
+          img: 'img/projects-notes.png',
+          status: 'Complete'
+        },
+        {
+          name: 'Graphs Game [training]',
+          href: 'https://nuxt-graphs.alcryalcry.now.sh/',
+          img: 'img/projects-graphs.png',
+          status: 'Under construction'
+        }
+      ],
+      other = [
+        {
+          title: 'My gists',
+          links: [
+            'https://gist.github.com/alcryalcry'
+          ]
+        },
+        {
+          title: 'Usefull pull requests',
+          links: [
+            'https://github.com/Pixeldenker/vue-body-scroll-lock/pull/6',
+            'https://github.com/30-seconds/30-seconds-of-css/pull/146'
+          ]
+        },
+      ]
+    } = data
+
+  ul.info
+    if head
+      li.info__item
+        .info__row
+          +info-head(head)
+
+    if skills
+      li.info__item
+        .title.title--h2 Skills
+        .info__row
+          +skills(skills)
+
+    if projects
+      li.info__item
+        .title.title--h2 Projects
+        .info__row
+          .row
+            each project in projects
+              .col-4.col-t-6
+                +project(project)
+
+    if other
+      li.info__item
+        .title.title--h2 Other
+        .info__row
+          each item in other
+            +info-other(item)

@@ -1,12 +1,8 @@
 extends ../layouts/layout.pug
-
+include ../components/info/info.pug
 //- +svg({iconName: 'arrow'})
 
 
 block content
-  .container(style="padding-top: 8rem; padding-bottom: 8rem;")
-    ul
-      li(style="display: flex; justify-content: space-between; align-items: flex-start; font-size: 4rem; padding: 2rem 0;")
-        a(class="link" href="https://nuxt-notes.alcryalcry.now.sh/") NOTES
-      li(style="display: flex; justify-content: space-between; align-items: flex-start; font-size: 4rem; padding: 2rem 0;")
-        a(class="link" href="https://nuxt-graphs.alcryalcry.now.sh/") GRAPHS 
+  .container
+    +info

@@ -13,7 +13,7 @@ html(lang='ru')
   body
     //- SVG sprite
     #symbols.visually-hidden
-      include ../../dist/assets/svg/symbol.svg
+      include ../../dist/svg/symbol.svg
 
     .page.js-page
 
@@ -24,7 +24,7 @@ html(lang='ru')
         .main__wrapper
           block content
 
-      block footer
-        +footer()
+      //- block footer
+      //-   +footer()
 
-script(src="assets/js/main.min.js")
+script(src="./js/main.min.js")

@@ -1,14 +1,14 @@
 $cols: $colCount;
 $sizeDesktop: 2rem;
-$sizeTablet: 1.5rem;
-$sizeMobile: 1rem;
+$sizeTablet: 2rem;
+$sizeMobile: 2rem;
 
 .row {
   display: flex;
   flex-wrap: wrap;
 
   @include desktop {
-    margin: 0 0 - $sizeDesktop;
+    margin: 0 - $sizeDesktop;
 
     &.no-gut {
       margin: 0;
@@ -18,7 +18,7 @@ $sizeMobile: 1rem;
       .col-#{$colNum} {
         flex: 0 0 (100% * $colNum / $cols);
         max-width: (100% * $colNum / $cols);
-        padding: 0 $sizeDesktop;
+        padding: $sizeDesktop;
         .no-gut & {
           padding: 0;
         }
@@ -29,54 +29,53 @@ $sizeMobile: 1rem;
         flex: 0 0 auto;
         width: auto;
         max-width: none;
-        padding-left: $sizeDesktop;
-        padding-right: $sizeDesktop;
+        padding: $sizeDesktop;
       }
     }
   }
 
   @include tablet {
-    margin: 0 0 - $sizeTablet;
-    
+    margin: 0 - $sizeTablet;
+
     &.no-gut {
       margin: 0;
     }
-    
+
     @for $colNum from 1 to $cols {
       .col-#{$colNum} {
         padding: 0 $sizeTablet;
-        
+
         .no-gut & {
           padding: 0;
         }
       }
-      
+
       .col-t-#{$colNum} {
         flex: 0 0 (100% * $colNum / $cols);
         max-width: (100% * $colNum / $cols);
-        padding: 0 $sizeTablet;
-        
+        padding: $sizeTablet;
+
         .no-gut & {
           padding: 0;
         }
       }
     }
   }
-  
+
   @include mobile {
-    margin: 0 0 - $sizeMobile;
+    margin: 0 - $sizeMobile;
 
     @for $colNum from 1 to $cols {
       .col-#{$colNum} {
         flex: 0 0 100%;
         max-width: 100%;
-        padding: 0 $sizeMobile;
+        padding: $sizeMobile;
       }
 
       .col-m-#{$colNum} {
         flex: 0 0 (100% * $colNum / $cols) !important;
         max-width: (100% * $colNum / $cols);
-        padding: 0 $sizeMobile;
+        padding: $sizeMobile;
 
         .no-gut & {
           padding: 0;
@@ -124,12 +123,12 @@ $sizeMobile: 1rem;
 .col-auto {
   @include tablet {
     .col-auto {
-      padding: 0 $sizeTablet;
+      padding: $sizeTablet;
     }
   }
   @include mobile {
     .col-auto {
-      padding: 0 $sizeMobile;
+      padding: $sizeMobile;
     }
   }
 }

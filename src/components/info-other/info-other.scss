@@ -1,0 +1,13 @@
+.info-other {
+  & + & {
+    margin-top: 4rem;
+  }
+  .title {
+    margin-bottom: 2rem;
+  }
+  .link-block {
+    & + .link-block {
+      margin-top: .5rem;
+    }
+  }
+}

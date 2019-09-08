@@ -2,6 +2,7 @@
 [Rr]eleases/
 [Bb]uild/
 [Dd]ist/
+dist
 node_modules
 npm-debug.log
 report.html

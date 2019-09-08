@@ -2,11 +2,17 @@
 @import "core/fonts";
 @import "core/vars";
 @import "core/mixins";
+@import "core/GUI";
 @import "core/common";
 @import "core/grid";
 @import "../../components/svg/svg.scss";
 @import "../../components/footer/footer.scss";
-@import "../../components/footer/footer.scss";
+@import "../../components/info/info.scss";
+@import "../../components/info-head/info-head.scss";
+@import "../../components/info-other/info-other.scss";
+@import "../../components/social/social.scss";
+@import "../../components/project/project.scss";
+@import "../../components/skills/skills.scss";
 
 
 

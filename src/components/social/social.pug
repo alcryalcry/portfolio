@@ -1,0 +1,13 @@
+mixin social(data)
+
+  .social
+    ul.social__list
+      each item in data
+        li.social__item
+          a.social__link(
+            href=item.href 
+            target="_blank" 
+            title=item.name 
+            noreferrer
+          )
+            +svg({iconName: item.icon})
