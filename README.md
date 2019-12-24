@@ -9,6 +9,12 @@ Frontend scaffolding tool based on Gulp 4 and Webpack 4 using pug, SCSS, JSON-se
 1. `cd mockapi && npm i`
 
 
+## Update packages versions
+1. `npm i -g npm-check-updates`
+1. `ncu -u`
+1. `npm install`
+
+
 ## Start
 1. `npm run dev` - dev server
 1. `npm run build` - build to dist folder
@@ -43,11 +49,9 @@ Frontend scaffolding tool based on Gulp 4 and Webpack 4 using pug, SCSS, JSON-se
     * `middlewares.js` - middlewares (using Node.js)
 
 
-
-## Update packages versions
-1. `npm i -g npm-check-updates`
-1. `ncu -u`
-1. `npm install`
+## Production
+1. `npm run generate`
+1. To deploy to production, push to the default branch, or run `now --prod` with our command-line interface.
 
 
 **Author**: Alexander Shiryakov (*alcryalcry@gmail.com*)
